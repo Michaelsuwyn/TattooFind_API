@@ -1,0 +1,11 @@
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\bin\Debug\netcoreapp2.0\TattooFind.deps.json
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\bin\Debug\netcoreapp2.0\TattooFind.runtimeconfig.json
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\bin\Debug\netcoreapp2.0\TattooFind.runtimeconfig.dev.json
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\bin\Debug\netcoreapp2.0\TattooFind.dll
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.csprojResolveAssemblyReference.cache
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.csproj.CoreCompileInputs.cache
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.AssemblyInfoInputs.cache
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.AssemblyInfo.cs
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\bin\Debug\netcoreapp2.0\TattooFind.pdb
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.dll
+C:\Users\nick\Documents\Visual Studio 2017\Projects\TattooFind\TattooFind\obj\Debug\netcoreapp2.0\TattooFind.pdb
