@@ -4,46 +4,42 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TattooFind.Models;
-using Microsoft.EntityFrameworkCore;
-
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TattooFind.Controllers
 {
     [Route("api/[controller]")]
-    public class IdeasController : Controller
+    public class CommentsController : Controller
     {
 
         private UserContext _context;
 
-        public IdeasController(UserContext context)
+        public CommentsController(UserContext context)
         {
             _context = context;
         }
 
+
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Idea> Get()
+        public IEnumerable<Comment> Get()
         {
-            //IList<Idea> Ideas = _context.Ideas.Include(i => i.User).ToList();
-            //return Ideas;
-            return _context.Ideas.ToList();
+            return _context.Comments.ToList();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Idea Get(int id)
+        public string Get(int id)
         {
-            return _context.Ideas.SingleOrDefault<Idea>(i => i.IdeaId == id);
+            return "value";
         }
 
-      
+        // POST api/values
         [HttpPost]
-        public void Post([FromBody]Idea Idea)
+        public void Post([FromBody]Comment comment)
         {
-            _context.Add(Idea);
-            _context.SaveChanges();
+            _context.Comments.Add(comment);
         }
 
         // PUT api/values/5
@@ -56,10 +52,6 @@ namespace TattooFind.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-
-            Idea deleter = _context.Ideas.SingleOrDefault<Idea>(i => i.IdeaId == id);
-            _context.Ideas.Remove(deleter);
-            _context.SaveChanges();
         }
     }
 }

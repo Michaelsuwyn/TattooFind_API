@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TattooFind.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,7 +24,10 @@ namespace TattooFind.Controllers
         // GET: api/values
         [HttpGet]
         public IEnumerable<User> Get()
-        {
+        { 
+            //return _context.Users.Include(u => u.Ideas).ToList();
+            
+        
             return _context.Users.ToList();
         }
 
@@ -31,7 +35,10 @@ namespace TattooFind.Controllers
         [HttpGet("{id}")]
         public User Get(int id)
         {
-            return new Models.User();
+            return _context.Users.SingleOrDefault<User>(u => u.UserId == id);
+           
+            
+
         }
 
         // POST api/values

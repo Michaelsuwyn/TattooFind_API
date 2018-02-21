@@ -11,30 +11,15 @@ using TattooFind.Models;
 namespace TattooFind.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20180221135150_comments")]
+    partial class comments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("TattooFind.Models.Artist", b =>
-                {
-                    b.Property<int>("ArtistId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Pricing");
-
-                    b.HasKey("ArtistId");
-
-                    b.ToTable("Artists");
-                });
 
             modelBuilder.Entity("TattooFind.Models.Comment", b =>
                 {
@@ -43,15 +28,11 @@ namespace TattooFind.Migrations
 
                     b.Property<string>("Answer");
 
-                    b.Property<int>("ArtistId");
-
                     b.Property<int>("IdeaId");
 
                     b.Property<string>("Image");
 
                     b.HasKey("CommentId");
-
-                    b.HasIndex("ArtistId");
 
                     b.HasIndex("IdeaId");
 
@@ -94,11 +75,6 @@ namespace TattooFind.Migrations
 
             modelBuilder.Entity("TattooFind.Models.Comment", b =>
                 {
-                    b.HasOne("TattooFind.Models.Artist", "Artist")
-                        .WithMany("Comments")
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("TattooFind.Models.Idea", "Idea")
                         .WithMany("Comments")
                         .HasForeignKey("IdeaId")
